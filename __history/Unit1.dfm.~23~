@@ -1,0 +1,119 @@
+object Form1: TForm1
+  Left = 0
+  Top = 0
+  Caption = #25105#27809#26377#31192#23494#20294#24076#26395#20320#20204#26377#31192#23494#65281'    by jiabin'
+  ClientHeight = 299
+  ClientWidth = 660
+  Color = clBtnFace
+  Font.Charset = DEFAULT_CHARSET
+  Font.Color = clWindowText
+  Font.Height = -11
+  Font.Name = 'Tahoma'
+  Font.Style = []
+  OldCreateOrder = False
+  OnCreate = FormCreate
+  DesignSize = (
+    660
+    299)
+  PixelsPerInch = 96
+  TextHeight = 13
+  object Label1: TLabel
+    Left = 100
+    Top = 245
+    Width = 36
+    Height = 13
+    Anchors = [akBottom]
+    AutoSize = False
+    Caption = #23494#30721#65306
+    ExplicitLeft = 96
+  end
+  object Label2: TLabel
+    Left = 352
+    Top = 245
+    Width = 58
+    Height = 13
+    Anchors = [akBottom]
+    Caption = #21152#23494#23383#31526'1:'
+  end
+  object Label3: TLabel
+    Left = 455
+    Top = 245
+    Width = 58
+    Height = 13
+    Anchors = [akBottom]
+    Caption = #21152#23494#23383#31526'2:'
+  end
+  object Label4: TLabel
+    Left = 551
+    Top = 245
+    Width = 64
+    Height = 13
+    Anchors = [akBottom]
+    Caption = #21152#23494#23383#31526#19977':'
+  end
+  object Memo1: TMemo
+    Left = 0
+    Top = 0
+    Width = 660
+    Height = 217
+    Align = alTop
+    Anchors = [akLeft, akTop, akRight, akBottom]
+    TabOrder = 0
+  end
+  object Button1: TButton
+    Left = 10
+    Top = 240
+    Width = 75
+    Height = 25
+    Anchors = [akBottom]
+    Caption = #22823#29976#35299#23494
+    TabOrder = 1
+    OnClick = Button1Click
+  end
+  object Button2: TButton
+    Left = 266
+    Top = 240
+    Width = 75
+    Height = 25
+    Anchors = [akBottom]
+    Caption = #22823#29976#21152#23494
+    TabOrder = 2
+    OnClick = Button2Click
+  end
+  object mima: TEdit
+    Left = 137
+    Top = 242
+    Width = 111
+    Height = 21
+    Anchors = [akBottom]
+    PasswordChar = '*'
+    TabOrder = 3
+  end
+  object diyigez: TEdit
+    Left = 416
+    Top = 242
+    Width = 25
+    Height = 21
+    Anchors = [akBottom]
+    TabOrder = 4
+    Text = #29976
+  end
+  object dierge: TEdit
+    Left = 519
+    Top = 242
+    Width = 26
+    Height = 21
+    Anchors = [akBottom]
+    TabOrder = 5
+    Text = #29233
+  end
+  object disange: TEdit
+    Left = 622
+    Top = 242
+    Width = 30
+    Height = 21
+    Anchors = [akBottom]
+    TabOrder = 6
+    Text = #24428
+  end
+end

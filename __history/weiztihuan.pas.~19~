@@ -1,0 +1,57 @@
+unit weiztihuan;
+
+interface
+uses
+SysUtils,Unit2,System.Classes;
+ function jiami(ETreir:string;strh1:string;strh2:string;strh3:string;jiami1:int64;jiami2:int64):string;
+ function jiemi(jiemistr:Tstrings;jiami1:int64;jiami2:int64):string;
+implementation
+function jiami(ETreir:string;strh1:string;strh2:string;strh3:string;jiami1:int64;jiami2:int64):string;
+var
+tmplen,jiabin:string;
+zhuzi,i,chang,mo:int64;
+temp:char;
+mima:string;
+     begin
+
+      for I := 1 to Length(ETreir)  do
+      begin
+          temp:=ETreir[i];
+          mo:= i mod 2;
+          if mo=0 then
+         zhuzi:= ord(temp)+jiami1
+         else
+         zhuzi:= ord(temp)+jiami2
+         ;
+          tmplen:= TC.HexToBitStr(IntToHex(zhuzi));
+          chang:=Length(tmplen);
+         jiabin:=jiabin+tmplen+strh3;
+
+      end;
+      jiabin:=StringReplace(jiabin, '0',strh1, [rfReplaceAll]);
+      jiabin:=StringReplace(jiabin, '1',strh2, [rfReplaceAll]);
+      Result:=jiabin;
+      end;
+  function jiemi(jiemistr:Tstrings;jiami1:int64;jiami2:int64):string;
+   var
+    jiabin:string;
+    mosu,zhiji,i:int64;
+    temp:char;
+    begin
+         for I := 0 to jiemistr.Count -1 do
+            begin
+                mosu:= I mod 2 ;
+
+                zhiji:=TC.BittoInt(jiemistr[i]);
+                if mosu =0 then
+                  zhiji:= zhiji-jiami1
+                  else
+                  zhiji:= zhiji-jiami2
+                    ;
+
+                jiabin:=jiabin+Char(zhiji);
+
+            end;
+            Result:=jiabin;
+    end;
+end.
